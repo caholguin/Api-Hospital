@@ -1,0 +1,708 @@
+{
+	"info": {
+		"_postman_id": "12f112f0-0a37-4a3f-8cac-ccd3f020a1fc",
+		"name": "API HOSPITAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17095028"
+	},
+	"item": [
+		{
+			"name": "Api Hospital",
+			"item": [
+				{
+					"name": "Citas",
+					"item": [
+						{
+							"name": "Listar citas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/citas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"citas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Guardar cita",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \r\n    \"fecha\": \"2024-05-23 15:17:04\",\r\n    \"statusCita\": \"PENDIENTE\",\r\n    \"cancelado\": false,\r\n    \"pacienteId\": 1,\r\n    \"medicoId\": 1 \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/citas/1/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"citas",
+										"1",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar cita",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \r\n    \"fecha\": \"2024-05-23 15:17:04\",\r\n    \"statusCita\": \"CANCELADA\",\r\n    \"cancelado\": false,\r\n    \"pacienteId\": 1,\r\n    \"medicoId\": 2 \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/citas/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"citas",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener cita",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/citas/25",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"citas",
+										"25"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar cita",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/citas/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"citas",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar citas por estatus",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/citas/status/PENDIENTE",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"citas",
+										"status",
+										"PENDIENTE"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar citas por medico",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/citas/medico/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"citas",
+										"medico",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar citas por paciente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/citas/paciente/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"citas",
+										"paciente",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Medico",
+					"item": [
+						{
+							"name": "Guardar medico",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Andres 22\",\r\n    \"email\": \"andres@Gmail.com\",\r\n    \"especialidad\": \"General\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/medicos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"medicos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Editar medico",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Andres 1\",\r\n    \"email\": \"andres@Gmail.com\",\r\n    \"especialidad\": \"General\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/medicos/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"medicos",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar medicos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/medicos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"medicos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener medico",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/medicos/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"medicos",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar medico",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/medicos/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"medicos",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener medico por especialidad",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/medicos/especialidad/general",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"medicos",
+										"especialidad",
+										"general"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener citas por medico",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/medicos/2/citas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"medicos",
+										"2",
+										"citas"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Paciente",
+					"item": [
+						{
+							"name": "Listar pacientes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/pacientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pacientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener paciente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/pacientes/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pacientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener citas por paciente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/pacientes/1/citas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pacientes",
+										"1",
+										"citas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar paciente",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/pacientes/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pacientes",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Crear paciente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"lopez\",\r\n    \"fechaNacimiento\": \"2024-05-23\",\r\n    \"enfermedad\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pacientes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pacientes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar paciente",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{   \r\n    \"nombre\": \"Christan\",\r\n    \"fechaNacimiento\": \"2024-05-23\",\r\n    \"enfermedad\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/pacientes/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"pacientes",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Consultas",
+					"item": [
+						{
+							"name": "Listar consultas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/consultas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"consultas"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener consulta",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/consultas/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"consultas",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar consulta",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/consultas/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"consultas",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultas por informe",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/consultas/searchParam?searchParam=Informe",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"consultas",
+										"searchParam"
+									],
+									"query": [
+										{
+											"key": "searchParam",
+											"value": "Informe"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Listar consultas por cita",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/consultas/cita/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"consultas",
+										"cita",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Guardar consulta",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"fechaConsulta\": \"2024-05-23 15:17:04\",\r\n    \"informe\": \"informe consulta\"   \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/consultas?citaId=7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"consultas"
+									],
+									"query": [
+										{
+											"key": "citaId",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Guardar consulta Copy",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"fechaConsulta\": \"2024-05-27 15:17:04\",\r\n    \"informe\": \"informe consulta actual\"   \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/consultas/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"consultas",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
